@@ -5,8 +5,12 @@
 </body> 
 </center>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
   
-
  .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -15,19 +19,37 @@
     margin: 0 auto;
   }
   
-  .gallery > div {
+.text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity .2s, visibility .2s;
+}
+
+ .gallery > div {
     width: 200px;
     height: 200px;
+    float: left;
+		font-size: 25px;
     background-position: center;
     background-size: cover;
+   opacity: 0;
   }
   
   .gallery > div:hover {
-		color: hsl(111, 14%, 56%);
+    visibility: visible;
+    opacity: 1;
     border: 2px solid hsl(111, 14%, 56%);
     border-style: inset;
   }
-  
+
   @media (max-width: 630px) {
     .gallery > div {
       width: calc(33vw - 10px);
@@ -35,10 +57,10 @@
     }
   }
   
-</style>
-
+</style>  
 <section class="gallery">
-  <div style="background-image: url(india.JPG)"></div>
+  <div style="background-image: url(india.JPG)">
+  </div>
   <div style="background-image: url(india2.JPG)"></div>
   <div style="background-image: url(india3.JPG)"></div>
   <div style="background-image: url(uchicago.JPG)"></div>
