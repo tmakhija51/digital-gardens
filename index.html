@@ -45,24 +45,60 @@
   </center>
 </body>
 <section class="gallery">
-  <div style="background-image: url(india.JPG)"></div>
-  <div style="background-image: url(india2.JPG)"></div>
-  <div style="background-image: url(india3.JPG)"></div>
-  <div style="background-image: url(uchicago.JPG)"></div>
-  <div style="background-image: url(chicago.jpg)"></div>
-  <div style="background-image: url(cobb.JPG)"></div>
-  <div style="background-image: url(nyc2.JPG)"></div>
-  <div style="background-image: url(mexico.JPG)"></div>
-  <div style="background-image: url(nyc.JPG)"></div>
-  <div style="background-image: url(plane.JPG)"></div>
-  <div style="background-image: url(sweden.JPG)"></div>
-  <div style="background-image: url(peru.JPG)"></div>
-  <div style="background-image: url(italy.JPG)"></div>
-  <div style="background-image: url(italy2.JPG)"></div>
-  <div style="background-image: url(italy3.JPG)"></div>
-  <div style="background-image: url(chicago2.JPG)"></div>
-  <div style="background-image: url(france.JPG)"></div>
-  <div style="background-image: url(japan.jpeg)"></div>
-  <div style="background-image: url(florida.JPG)"></div>
-  <div style="background-image: url(florida2.png)"></div>
+  <div id="box1" class="gallery" style="background-image: url(india.JPG)"></div>
+  <div id="box2" class="gallery" style="background-image: url(india2.JPG)"></div>
+  <div id="box3" class="gallery" style="background-image: url(india3.JPG)"></div>
+  <div id="box4" class="gallery" style="background-image: url(uchicago.JPG)"></div>
+  <div id="box5" class="gallery" style="background-image: url(chicago.jpg)"></div>
+  <div id="box6" class="gallery" style="background-image: url(cobb.JPG)"></div>
+  <div id="box7" class="gallery" style="background-image: url(nyc2.JPG)"></div>
+  <div id="box8" class="gallery" style="background-image: url(mexico.JPG)"></div>
+  <div id="box9" class="gallery" style="background-image: url(nyc.JPG)"></div>
+  <div id="box10" class="gallery" style="background-image: url(plane.JPG)"></div>
+  <div id="box11" class="gallery" style="background-image: url(sweden.JPG)"></div>
+  <div id="box12" class="gallery" style="background-image: url(peru.JPG)"></div>
+  <div id="box13" class="gallery" style="background-image: url(italy.JPG)"></div>
+  <div id="box14" class="gallery" style="background-image: url(italy2.JPG)"></div>
+  <div id="box15" class="gallery" style="background-image: url(italy3.JPG)"></div>
+  <div id="box16" class="gallery" style="background-image: url(chicago2.JPG)"></div>
+  <div id="box17" class="gallery" style="background-image: url(france.JPG)"></div>
+  <div id="box18" class="gallery" style="background-image: url(japan.jpeg)"></div>
+  <div id="box19" class="gallery" style="background-image: url(florida.JPG)"></div>
+  <div id="box20" class="gallery" style="background-image: url(florida2.png)"></div>
 </section>
+
+<script>
+  const dict = {
+    box1: '#9dafa3',
+    box2: '#7ba69f',
+    box3: '#9c6d4b',
+    box4: '#7f7339',
+    box5: '#f1f3f6',
+    box6: '#8c7c6c',
+    box7: '#b25f3b',
+    box8: '#cba672',
+    box9: '#f0ece0',
+    box10: '#90bfd4',
+    box11: '#41addb',
+    box12: '#709125',
+    box13: '#ecc59e',
+    box14: '#678985',
+    box15: '#a25f45',
+    box16: '#a2b7dc',
+    box17: '#4d7a7a',
+    box18: '#a9bc8e',
+    box19: '#be7250',
+    box20: '#be7250'
+  }
+  
+  document.querySelectorAll('.gallery > div').forEach(div => {
+    div.addEventListener('mouseover', () => {
+      const color = dict[div.id]
+      div.style.border = `5px solid ${color}`
+    })
+    div.addEventListener('mouseout', () => {
+      div.style.border = '5px solid white'
+    })
+  })
+
+</script>
